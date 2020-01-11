@@ -58,6 +58,7 @@ export default function SectionLogin({
     const url = await firebaseStorage
       .child("images/" + fileName)
       .getDownloadURL();
+
     setSelectedImage(url);
     onImageUploaded(url);
     setUploadingImage(false);

@@ -36,10 +36,7 @@ export default function LandingPage(props) {
     error: undefined,
     imageUrl: undefined
   });
-<<<<<<< HEAD
 
-=======
->>>>>>> init
   const [isLoading, setIsLoading] = React.useState(false);
   const [imageUrl, setImageUrl] = React.useState(false);
   const { email, displayName, password, error } = form;
@@ -47,10 +44,7 @@ export default function LandingPage(props) {
   const isUserSignedIn = React.useMemo(() => {
     return JSON.parse(localStorage.getItem("user"));
   }, []);
-<<<<<<< HEAD
 
-=======
->>>>>>> init
   // function that handles `TextInput` change that update component
   // state with the current input value
   const handleInputChange = React.useCallback(
@@ -80,15 +74,10 @@ export default function LandingPage(props) {
   const handleSignup = React.useCallback(async () => {
     if (!displayName) {
       setForm({ ...form, error: "First name is required" });
-<<<<<<< HEAD
-      return;
-    }
-
-=======
 
       return;
     }
->>>>>>> init
+
     // Try to Signup the current user with `firebase` server.
     try {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
@@ -97,11 +86,6 @@ export default function LandingPage(props) {
         .auth()
         .signInWithEmailAndPassword(email, password);
 
-<<<<<<< HEAD
-=======
-      console.log(user);
-
->>>>>>> init
       await user.updateProfile({ displayName, photoURL: imageUrl });
 
       setUser({ user });
