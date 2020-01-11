@@ -44,9 +44,7 @@ export default function TeamSection() {
                 <br />
                 <large className={classes.smallTitle}> Developer </large>
               </h4>
-              <CardBody>
-              
-              </CardBody>
+              <CardBody></CardBody>
               <CardFooter className={classes.justifyCenter}>
                 <Button
                   justIcon
@@ -82,9 +80,7 @@ export default function TeamSection() {
                 <br />
                 <large className={classes.smallTitle}> Designer </large>
               </h4>
-              <CardBody>
-
-              </CardBody>
+              <CardBody></CardBody>
               <CardFooter className={classes.justifyCenter}>
                 <Button
                   justIcon
@@ -113,9 +109,7 @@ export default function TeamSection() {
                 <br />
                 <large className={classes.smallTitle}> Business Manager </large>
               </h4>
-              <CardBody>
-
-              </CardBody>
+              <CardBody></CardBody>
               <CardFooter className={classes.justifyCenter}>
                 <Button
                   justIcon

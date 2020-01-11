@@ -75,7 +75,6 @@ export default function ProfilePage(props) {
     try {
       const userRef = db.collection("users").doc(user.uid);
       const _user = await userRef.get();
-
       if (!_user.exists) {
         setModalOpen(true);
       } else {

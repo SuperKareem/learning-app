@@ -24,9 +24,11 @@ export default function ProductSection() {
           <h2 className={classes.title}>Let{"'"}s talk product</h2>
 
           <h5 className={classes.description}>
-
-          PlanX is your gate to better future academic plans, whether you are a bachelor, masters, or PhD student. You will find massive data base of most universities with a variety of programs that allows all students to find the best options, which suit the requirements they search for locally or internationally.
-
+            PlanX is your gate to better future academic plans, whether you are
+            a bachelor, masters, or PhD student. You will find massive data base
+            of most universities with a variety of programs that allows all
+            students to find the best options, which suit the requirements they
+            search for locally or internationally.
           </h5>
         </GridItem>
       </GridContainer>
