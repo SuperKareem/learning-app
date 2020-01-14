@@ -243,7 +243,7 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Learning"
+        brand="PlandX"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -259,76 +259,76 @@ export default function ProfilePage(props) {
           <CircularProgress />
         </GridContainer>
       ) : (
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          {!signedUser ? (
-            <Modal isOpen={modalOpen} onDataSubmit={handleDataSubmit} />
-          ) : (
-            <div>
-              <div className={classes.container}>
-                <GridContainer justify="center">
-                  <GridItem xs={12} sm={12} md={6}>
-                    <div className={classes.profile}>
-                      <div>
-                        <img
-                          src={user.photoURL || profile}
-                          alt="..."
-                          className={imageClasses}
-                        />
-                      </div>
-                    </div>
-                  </GridItem>
-                </GridContainer>
-                <div className={classes.container}>
-                  <GridContainer>
-                    <GridItem xs={10} sm={10} md={10}>
-                      <h2>{signedUser && signedUser.university.name}</h2>
-                      <h3>
-                        {signedUser &&
-                          `${signedUser.major.name} / ${signedUser.speciality.name}`}
-                      </h3>
-                    </GridItem>
-                    <GridItem justify="end" aling="end" xs={2} sm={2} md={2}>
-                      <Button
-                        classes={classes.root}
-                        onClick={handleReset}
-                        color="primary"
-                      >
-                        reset
+          <div className={classNames(classes.main, classes.mainRaised)}>
+            {!signedUser ? (
+              <Modal isOpen={modalOpen} onDataSubmit={handleDataSubmit} />
+            ) : (
+                <div>
+                  <div className={classes.container}>
+                    <GridContainer justify="center">
+                      <GridItem xs={12} sm={12} md={6}>
+                        <div className={classes.profile}>
+                          <div>
+                            <img
+                              src={user.photoURL || profile}
+                              alt="..."
+                              className={imageClasses}
+                            />
+                          </div>
+                        </div>
+                      </GridItem>
+                    </GridContainer>
+                    <div className={classes.container}>
+                      <GridContainer>
+                        <GridItem xs={10} sm={10} md={10}>
+                          <h2>{signedUser && signedUser.university.name}</h2>
+                          <h3>
+                            {signedUser &&
+                              `${signedUser.major.name} / ${signedUser.speciality.name}`}
+                          </h3>
+                        </GridItem>
+                        <GridItem justify="end" aling="end" xs={2} sm={2} md={2}>
+                          <Button
+                            classes={classes.root}
+                            onClick={handleReset}
+                            color="primary"
+                          >
+                            reset
                       </Button>
-                    </GridItem>
-                  </GridContainer>
-                </div>
-                <GridContainer justify="center">
-                  <GridItem
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    className={classes.navWrapper}
-                  >
-                    {isLoadingMaterials ? (
-                      <CircularProgress />
-                    ) : (
-                      <>
-                        <CustomLinearProgress
-                          variant="determinate"
-                          color="primary"
-                          value={isNaN(barValue) ? 0 : barValue}
-                        />
+                        </GridItem>
+                      </GridContainer>
+                    </div>
+                    <GridContainer justify="center">
+                      <GridItem
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        className={classes.navWrapper}
+                      >
+                        {isLoadingMaterials ? (
+                          <CircularProgress />
+                        ) : (
+                            <>
+                              <CustomLinearProgress
+                                variant="determinate"
+                                color="primary"
+                                value={isNaN(barValue) ? 0 : barValue}
+                              />
 
-                        <SectionTabs
-                          courses={courses}
-                          completedMaterials={completedMaterials}
-                          handleCheck={handleMaterialCheck}
-                        />
-                      </>
-                    )}
-                  </GridItem>
-                </GridContainer>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
+                              <SectionTabs
+                                courses={courses}
+                                completedMaterials={completedMaterials}
+                                handleCheck={handleMaterialCheck}
+                              />
+                            </>
+                          )}
+                      </GridItem>
+                    </GridContainer>
+                  </div>
+                </div>
+              )}
+          </div>
+        )}
       <Footer />
     </div>
   );

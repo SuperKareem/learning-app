@@ -39,7 +39,7 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Learning"
+        brand="PlandX"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"

@@ -101,7 +101,7 @@ export default function LandingPage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Learning"
+        brand="PlandX"
         rightLinks={<HeaderLinks />}
         changeColorOnScroll={{
           height: 100,
@@ -146,15 +146,15 @@ export default function LandingPage(props) {
           {isUserSignedIn ? (
             undefined
           ) : (
-            <SectionLogin
-              isLoginPage={false}
-              onMainCLick={handleSignup}
-              handleInputChange={handleInputChange}
-              error={error}
-              isLoading={isLoading}
-              onImageUploaded={onImageUploaded}
-            />
-          )}
+              <SectionLogin
+                isLoginPage={false}
+                onMainCLick={handleSignup}
+                handleInputChange={handleInputChange}
+                error={error}
+                isLoading={isLoading}
+                onImageUploaded={onImageUploaded}
+              />
+            )}
         </div>
       </div>
       <Footer />

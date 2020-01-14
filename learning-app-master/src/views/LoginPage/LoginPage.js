@@ -18,7 +18,7 @@ const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function() {
+  setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
@@ -69,7 +69,7 @@ export default function LoginPage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Learning"
+        brand="PlandX"
         rightLinks={<HeaderLinks />}
         changeColorOnScroll={{
           height: 100,
