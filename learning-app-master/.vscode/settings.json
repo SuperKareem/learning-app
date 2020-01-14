@@ -1,0 +1,18 @@
+{
+  // START: `prettier-vscode` configuration. @see {@link https://github.com/prettier/prettier-vscode}
+  "eslint.enable": true,
+  // @see {@link https://github.com/microsoft/vscode-eslint/blob/master/README.md#vs-code-eslint-extension}
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // END: `prettier-vscode` configuration.
+  "editor.formatOnSave": true,
+  "[handlebars]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+  },
+  "files.trimTrailingWhitespace": true,
+  "editor.rulers": [
+    80
+  ]
+}
