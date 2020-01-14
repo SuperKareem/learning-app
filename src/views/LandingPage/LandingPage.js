@@ -86,7 +86,7 @@ export default function LandingPage(props) {
         .auth()
         .signInWithEmailAndPassword(email, password);
 
-      await user.updateProfile({ displayName, photoURL: imageUrl });
+      await user.updateProfile({ displayName, photoURL: imageUrl || "" });
 
       setUser({ user });
       window.location.assign("/profile-page");
